@@ -4,8 +4,8 @@
         echo '<script type="text/javascript">';
         echo ' alert("This IC Number have been registered!");';
         echo 'window.location.href = "page4.html";';
-        echo '</script>'; 
-    }
+        echo '</script>';
+    } 
     else {   //filename not found, write to file
            $content_to_write = "First Name: " . $_POST['fname'] . "\n";
            $content_to_write .= "Last Name: " . $_POST['lname'] . "\n";
@@ -24,4 +24,3 @@
 
         header('Location: thank_you_page.html');
     }
-    ?>

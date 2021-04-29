@@ -7,12 +7,10 @@
             echo ' alert("You are already registered!");';
             echo 'window.location.href = "page4.html";';
             echo '</script>';
-    }
+    } 
     else {
         echo '<script type="text/javascript">';
         echo ' alert("You have not been registered yet!");';
         echo 'window.location.href = "page4.html";';
         echo '</script>';
     }
-
-    ?>
