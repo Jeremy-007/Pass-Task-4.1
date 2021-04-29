@@ -1,12 +1,12 @@
     <?php
 
-if (file_exists($_POST['icno'] . '.txt')) {      //Check for filename with given nric
-    echo '<script type="text/javascript">';
-    echo ' alert("This IC Number have been registered!");';
-    echo 'window.location.href = "page4.html";';
-    echo '</script>';
-} 
-else {   //filename not found, write to file     
+    if (file_exists($_POST['icno'] . '.txt')) {      //Check for filename with given nric
+        echo '<script type="text/javascript">';
+        echo ' alert("This IC Number have been registered!");';
+        echo 'window.location.href = "page4.html";';
+        echo '</script>'; 
+    }
+    else {   //filename not found, write to file
            $content_to_write = "First Name: " . $_POST['fname'] . "\n";
            $content_to_write .= "Last Name: " . $_POST['lname'] . "\n";
            $content_to_write .= "IC Number/Passport ID : " . $_POST['icno'] . "\n";
@@ -19,9 +19,10 @@ else {   //filename not found, write to file
            $content_to_write .= "Vaccine Selected: " . $_POST['vaccine'] . "\n";
            $content_to_write .= "Gender: " . $_POST['gender'] . "\n";
            $content_to_write .= "Date Of Birth: " . $_POST['dob'] . "\n";
-           
+
            file_put_contents($_POST['icno'] . '.txt', $content_to_write);
-            
+
         header('Location: thank_you_page.html');
-        } 
+    
     ?>
+ 
