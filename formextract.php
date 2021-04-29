@@ -23,6 +23,5 @@
            file_put_contents($_POST['icno'] . '.txt', $content_to_write);
 
         header('Location: thank_you_page.html');
-    
+    }
     ?>
- 
