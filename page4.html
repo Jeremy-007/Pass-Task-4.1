@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html class="theme-cyan cdc-page-type-content cdc-2020" lang="en-us">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="home_files/bootstrap.css">
+    <link rel="stylesheet" href="home_files/app.css">
+    <link rel="stylesheet" href="home_files/form.css">
+       
+    <title>Home | COVID-19 Info Center</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">	
+    
+    <style> 
+        body   { 
+            background-image:url('media/vaccination_Background.jpg'); 
+            background-repeat: no-repeat;
+            background-attachment: fixed;  
+            background-size: cover;
+            };
+    </style>
+</head>
+
+<body>
+ 
+    <div class="container-fluid site-title">
+    <!-- <div class=""> -->
+        <div class="container">
+            <div class="row">
+                <h3>COVID-19 Info Center</h3>
+            </div>
+        </div>
+    </div>
+  
+    <div id="cdc-meganav-wrapper">
+        
+        <div class="container" id="cdc-meganav-bar">
+            
+            <nav class="navbar navbar-expand-xl yamm">
+            
+                <ul class="nav navbar-nav nav-justified w-100">
+                  
+                   <li class="nav-item" id="menu-home">
+                        <a class="nav-link" href="home.html">
+                            Home</a>
+                    </li>
+
+                    <li class="nav-item" id="menu1">
+                        <a class="nav-link" href="page1.html">
+                            Moderna</a>
+                    </li>
+
+                    <li class="nav-item" id="menu2">
+                        <a class="nav-link" href="page2.html">
+                            Pfizer-BioNTech</a>
+                    </li>
+
+                    <li class="nav-item" id="menu3">
+                        <a class="nav-link" href="page3.html">
+                           Johnson and Johnson’s Janssen</a>
+                    </li>
+
+                    <li class="nav-item" id="menu4">
+                        <a class="nav-link active" href="page4.html">
+                            Register Vaccine</a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+    
+        <div class="container d-flex flex-wrap body-wrapper" style="background-image: url('media/vaccination_Box_Background.jpg');">
+             <div class="col">
+              <div class="card border-0 rounded-0 mb-3">
+                  <section>
+                                <div class="card-body ">
+                                        <form action="check-reg.php" method="post">
+                                        <h2 class="card-title h3 mb-3 text-left">Vaccine registration check</h2>
+                                            <p>Insert your information here to check if you had registered.</p>
+                                              <div class="col-3">
+        <label class="form-label">IC Number</label>
+        <input name="icno" type="text" required />
+        <br>
+        <br> 
+         <button type="submit">Check</button>
+                                                
+                                            </div>
+                                        
+                                            </form>
+                                     
+                                    
+                                    
+                      </div> </section>
+                 </div> 
+                
+                 
+             <form id="job-form" method="post" action="formextract.php" >
+  <section>
+    <h2 class="form-section-title">Vaccine Registration Form</h2>
+    <div class="row">
+      <div class="col-4">
+        <label class="form-label">First Name</label>
+        <input name="fname"  type="text" required />
+      </div>
+ 
+      <div class="col-4">
+        <label class="form-label">Last Name</label>
+        <input name="lname" type="text" required />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <label class="form-label">IC Number</label>
+        <input name="icno" type="text" required />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-7">
+        <label class="form-label">Email</label>
+        <input name="email" type="email" required />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-9">
+        <label class="form-label">Street Address</label>
+        <input name="address" type="text" placeholder="Address" required />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <input name="city" type="text" placeholder="City" required />
+      </div>
+      <div class="col-4">
+        <input name="state" type="text" placeholder="State" required />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <input name="zipcode" type="text" placeholder="Zip Code" required />
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-3">
+        <label class="form-label">Mobile Phone</label>
+        <input name="nofon" type="text" required />
+      </div>
+      <div class="col-3">
+        <label class="form-label">Vaccine</label>
+        <select name="vaccine" required>
+          <option value="" disabled selected>Choose vaccine</option>
+          <option value="Moderna Vaccine">Moderna Vaccine</option>
+          <option value="Pfizer-BioNTech Vaccine">Pfizer-BioNTech Vaccine</option>
+          <option value="Johnson and Johnson's Janssen Vaccine">Johnson and Johnson's Janssen Vaccine</option>
+        </select>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-3">
+        <label class="form-label">Gender</label>
+        <input name="gender" type="radio" value="male" required /><span class="radio-selection"> Male</span> <input name="gender" type="radio" value="female" /><span class="radio-selection"> Female</span>
+      </div>
+      <div class="col-3">
+        <label class="form-label">Date of Birth</label>
+        <input name="dob" type="date" required />
+      </div>
+    </div>
+
+   
+  <input class="button" name="submit" type="submit" value="Submit" />
+  </section>
+
+</form>
+            
+
+
+                
+             </div>    
+            
+    </div>
+    
+           
+    <div class="container-fluid">
+        <div class="container">
+        
+            <div class="card-body bg-quaternary">
+                    
+                <h5>Disclaimer</h5>
+                <p style="font-size:14px;">This website is created mainly for educational and non-commercial use only. It is a 
+                partial fulfillment for completion of unit SWE20001 - Development Project 1 offered in 
+                Swinburne University of Technology, Sarawak Campus. The web-master and author(s) do not 
+                represent the business entity. The content of the pages of this website might be out-dated 
+                or inaccurate, thus, the author(s) and web-master does not take any responsibility for 
+                incorrect information disseminated or cited from this website.</p>
+                
+            </div>
+        </div>
+    </div>
+    
+    
+    </body>
+</html>
